@@ -43,7 +43,7 @@ export default function Pricing() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4">
             Planos e{' '}
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="gradient-xpace-text">
               Valores
             </span>
           </h2>
@@ -57,7 +57,7 @@ export default function Pricing() {
               onClick={() => setFrequency('once')}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 frequency === 'once'
-                  ? 'bg-gradient-to-r from-primary to-secondary text-background'
+                  ? 'gradient-xpace text-white'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
@@ -67,7 +67,7 @@ export default function Pricing() {
               onClick={() => setFrequency('twice')}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 frequency === 'twice'
-                  ? 'bg-gradient-to-r from-primary to-secondary text-background'
+                  ? 'gradient-xpace text-white'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >

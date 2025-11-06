@@ -40,7 +40,7 @@ export default function DanceStyles() {
             repeat: Infinity,
             ease: 'linear',
           }}
-          className="absolute top-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
+          className="absolute top-20 -left-20 w-64 h-64 bg-xpace-purple/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -52,7 +52,7 @@ export default function DanceStyles() {
             repeat: Infinity,
             ease: 'linear',
           }}
-          className="absolute bottom-20 -right-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl"
+          className="absolute bottom-20 -right-20 w-80 h-80 bg-xpace-orange/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -67,7 +67,7 @@ export default function DanceStyles() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4">
             Estilos de{' '}
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="gradient-xpace-text">
               Dança
             </span>
           </h2>

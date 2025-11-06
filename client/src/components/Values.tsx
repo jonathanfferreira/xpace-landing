@@ -42,7 +42,7 @@ export default function Values() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4">
             Nossos{' '}
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="gradient-xpace-text">
               Valores
             </span>
           </h2>
@@ -76,7 +76,7 @@ export default function Values() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Icon */}
-                <div className="relative text-6xl mb-4 transition-transform duration-300 group-hover:scale-110">
+                <div className="relative text-6xl mb-4 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(155,135,245,0.3)]">
                   {value.icon}
                 </div>
                 
@@ -105,7 +105,7 @@ export default function Values() {
           </p>
           <a
             href="#planos"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-background hover:opacity-90 transition-opacity"
+            className="inline-block px-8 py-3 gradient-xpace rounded-full font-bold text-white hover:opacity-90 transition-opacity shadow-lg shadow-xpace-purple/30"
           >
             Conheça nossos planos
           </a>

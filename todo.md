@@ -117,3 +117,11 @@
 - [x] Adicionar badge NEW para Dança de Salão
 - [x] Filtros por dia da semana
 - [x] Cards animados com hover effects
+
+## 🚨 BUGS CRÍTICOS - Identidade Visual
+- [ ] Cores da marca não aparecem (roxo e laranja sumidos)
+- [ ] Página toda preta e branca sem personalidade
+- [ ] Toggle de tema não funciona ao clicar no sol
+- [ ] Revisar todo o CSS e aplicar cores corretas
+- [ ] Adicionar mais elementos visuais com roxo/laranja
+- [ ] Garantir que gradientes funcionem corretamente
