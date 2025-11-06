@@ -1,19 +1,28 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Values from "@/components/Values";
+import DanceStyles from "@/components/DanceStyles";
+import Pricing from "@/components/Pricing";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <Values />
+      <DanceStyles />
+      <Pricing />
       
       {/* Placeholder for other sections */}
-      <section id="valores" className="min-h-screen flex items-center justify-center">
+      <section className="min-h-screen flex items-center justify-center">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-4">Mais seções em breve...</h2>
-          <p className="text-muted-foreground">Valores, Estilos, Professores, Horários, Planos e muito mais!</p>
+          <p className="text-muted-foreground">Professores, Horários e Galeria!</p>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

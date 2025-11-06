@@ -22,8 +22,8 @@
 - [ ] Barra de progresso de scroll
 
 ## 📚 Seções de Conteúdo
-- [ ] Seção Valores (6 cards com animações)
-- [ ] Seção Estilos de Dança (grid com filtros)
+- [x] Seção Valores (6 cards com animações)
+- [x] Seção Estilos de Dança (grid com modal)
 - [ ] Cards de estilos com hover 3D
 - [ ] Modal de detalhes dos estilos
 - [ ] Seção Professores (19 professores)
@@ -80,3 +80,24 @@
 - [ ] Setup de domínio customizado
 - [ ] SSL e segurança
 - [ ] Monitoring e analytics
+
+## 🔧 Correções e Ajustes
+- [x] Corrigir tema dark não aplicando por padrão
+- [x] Atualizar dados de planos com informações reais do Nextfit
+- [x] Atualizar estilos de dança com modalidades reais do Nextfit
+- [ ] Remover biografia dos professores (só nome, foto e estilos)
+
+## 📊 Dados Coletados
+- [x] Coletar informações de planos do Nextfit
+- [x] Identificar 8 modalidades disponíveis
+- [x] Mapear estrutura de preços (mensal, semestral, anual)
+
+## ✅ Seções Implementadas Recentemente
+- [x] Seção Planos com dados reais do Nextfit
+- [x] Toggle 1x/2x por semana nos planos
+- [x] Cards de planos com destaque para anual
+- [x] Footer completo com 4 colunas
+- [x] Redes sociais (Instagram, TikTok, YouTube)
+- [x] Informações de contato clicáveis
+- [x] Link para Google Maps
+- [x] Copyright e CNPJ

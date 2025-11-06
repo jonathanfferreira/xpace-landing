@@ -33,76 +33,52 @@ export const XPACE_INFO = {
 
 export const DANCE_STYLES = [
   {
-    slug: 'hip-hop',
-    name: 'Hip Hop',
-    description: 'Cultura urbana com danças sociais, grooves, freestyle e foundations.',
+    slug: 'dancas-urbanas',
+    name: 'Danças Urbanas',
+    description: 'Hip Hop, Breaking, Popping, Locking e toda a cultura urbana. Grooves, freestyle e foundations para todos os níveis.',
     color: 'from-primary to-secondary'
-  },
-  {
-    slug: 'vogue',
-    name: 'Vogue',
-    description: 'Originado na Ballroom culture, com poses, linhas e categorias como Vogue Femme, Old Way e New Way.',
-    color: 'from-secondary to-accent'
-  },
-  {
-    slug: 'jazz-funk',
-    name: 'Jazz Funk',
-    description: 'Mistura do jazz com a estética pop/comercial, ênfase em precisão e performance.',
-    color: 'from-accent to-primary'
-  },
-  {
-    slug: 'waacking',
-    name: 'Waacking',
-    description: 'Nascido nas discotecas de Los Angeles nos anos 70, com foco em expressão, linhas de braços e musicalidade.',
-    color: 'from-neon-purple to-primary'
-  },
-  {
-    slug: 'contemporaneo',
-    name: 'Contemporâneo',
-    description: 'Dança expressiva que combina técnicas clássicas e modernas com liberdade criativa.',
-    color: 'from-primary to-electric-blue'
   },
   {
     slug: 'jazz',
     name: 'Jazz',
-    description: 'Estilo clássico com técnica refinada, isolações e expressão artística.',
-    color: 'from-secondary to-neon-pink'
+    description: 'Estilo clássico com técnica refinada, isolações e expressão artística. Base para diversos estilos de dança.',
+    color: 'from-secondary to-accent'
   },
   {
-    slug: 'house',
-    name: 'House',
-    description: 'Clubes de Chicago/NY, com footwork, jacking e lofting.',
-    color: 'from-electric-blue to-primary'
-  },
-  {
-    slug: 'dancehall',
-    name: 'Dancehall',
-    description: 'Da Jamaica, passos e variações com forte identidade cultural.',
-    color: 'from-accent to-neon-pink'
+    slug: 'jazzfunk',
+    name: 'Jazz Funk',
+    description: 'Mistura do jazz com a estética pop/comercial. Ênfase em precisão, performance e atitude.',
+    color: 'from-accent to-primary'
   },
   {
     slug: 'heels',
     name: 'Heels',
-    description: 'Dança de salto alto combinando técnica, sensualidade e empoderamento.',
+    description: 'Dança de salto alto combinando técnica, sensualidade e empoderamento. Confiança e expressão feminina.',
     color: 'from-neon-pink to-secondary'
   },
   {
-    slug: 'acrobacias',
-    name: 'Acrobacias',
-    description: 'Movimentos acrobáticos e aéreos para complementar coreografias.',
+    slug: 'contemporaneo',
+    name: 'Contemporâneo',
+    description: 'Dança expressiva que combina técnicas clássicas e modernas com liberdade criativa e emoção.',
+    color: 'from-primary to-electric-blue'
+  },
+  {
+    slug: 'danca-de-salao',
+    name: 'Dança de Salão',
+    description: 'Ritmos latinos e de salão. Samba, salsa, forró, bolero e muito mais para dançar a dois.',
+    color: 'from-accent to-neon-pink'
+  },
+  {
+    slug: 'acrobacia',
+    name: 'Acrobacia',
+    description: 'Movimentos acrobáticos e aéreos. Força, flexibilidade e controle corporal para complementar coreografias.',
     color: 'from-primary to-accent'
   },
   {
-    slug: 'locking',
-    name: 'Locking',
-    description: 'Estilo funk com movimentos travados, pontos e energia contagiante.',
-    color: 'from-accent to-electric-blue'
-  },
-  {
-    slug: 'ritmos',
-    name: 'Ritmos',
-    description: 'Aulas com diversos ritmos latinos e populares para iniciantes.',
-    color: 'from-secondary to-accent'
+    slug: 'fitdance',
+    name: 'FitDance',
+    description: 'Dança fitness com coreografias animadas. Queime calorias enquanto se diverte dançando!',
+    color: 'from-electric-blue to-primary'
   }
 ];
 
@@ -117,20 +93,23 @@ export const VALUES = [
 
 export const PLANS = {
   enrollment: 80,
-  additionalStyle: 90,
   plans: [
     {
-      id: 'monthly',
-      name: 'Plano Mensal',
-      popular: false,
+      id: 'annual',
+      name: 'Plano Anual',
+      duration: '12 meses',
+      installments: 12,
+      popular: true,
+      highlight: 'Melhor custo-benefício',
       prices: {
-        twice: 160,
-        once: 120
+        twice: 130,
+        once: 100
       }
     },
     {
       id: 'semester',
       name: 'Plano Semestral',
+      duration: '6 meses',
       installments: 6,
       popular: false,
       prices: {
@@ -139,14 +118,26 @@ export const PLANS = {
       }
     },
     {
-      id: 'annual',
-      name: 'Plano Anual',
-      installments: 12,
-      popular: true,
+      id: 'monthly',
+      name: 'Plano Mensal',
+      duration: '1 mês',
+      installments: 1,
+      popular: false,
       prices: {
-        twice: 130,
-        once: 100
+        twice: 160,
+        once: 120
       }
     }
   ]
 };
+
+export const MODALITIES = [
+  'Acrobacia',
+  'Contemporâneo',
+  'Dança de Salão',
+  'Danças Urbanas',
+  'FitDance',
+  'Heels',
+  'Jazz',
+  'JazzFunk'
+];
