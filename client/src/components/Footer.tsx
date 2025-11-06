@@ -10,7 +10,7 @@ export default function Footer() {
       name: 'Instagram',
       icon: Instagram,
       url: XPACE_INFO.social.instagram,
-      color: 'hover:text-pink-500'
+      color: 'hover:text-xpace-purple'
     },
     {
       name: 'TikTok',
@@ -20,13 +20,13 @@ export default function Footer() {
         </svg>
       ),
       url: XPACE_INFO.social.tiktok,
-      color: 'hover:text-white'
+      color: 'hover:text-xpace-orange'
     },
     {
       name: 'YouTube',
       icon: Youtube,
       url: XPACE_INFO.social.youtube,
-      color: 'hover:text-red-500'
+      color: 'hover:text-xpace-orange'
     }
   ];
 
@@ -40,7 +40,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-card border-t border-border overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-xpace-purple/5 to-transparent pointer-events-none" />
       
       <div className="container relative z-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">

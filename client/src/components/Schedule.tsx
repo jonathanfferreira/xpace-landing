@@ -90,7 +90,7 @@ export default function Schedule() {
   return (
     <section id="horarios" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-xpace-purple/5 to-background pointer-events-none" />
 
       <div className="container relative z-10">
         {/* Section Header */}
@@ -103,7 +103,7 @@ export default function Schedule() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4">
             Grade de{' '}
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="gradient-xpace-text">
               Horários
             </span>
           </h2>
@@ -124,8 +124,8 @@ export default function Schedule() {
             onClick={() => setSelectedDay(null)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               selectedDay === null
-                ? 'bg-gradient-to-r from-primary to-secondary text-background shadow-lg shadow-primary/30'
-                : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/50'
+                ? 'gradient-xpace text-white shadow-lg shadow-xpace-purple/30'
+                : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-xpace-purple/50'
             }`}
           >
             Todos os dias
@@ -136,8 +136,8 @@ export default function Schedule() {
               onClick={() => setSelectedDay(schedule.day)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedDay === schedule.day
-                  ? 'bg-gradient-to-r from-primary to-secondary text-background shadow-lg shadow-primary/30'
-                  : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/50'
+                  ? 'gradient-xpace text-white shadow-lg shadow-xpace-purple/30'
+                  : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-xpace-purple/50'
               }`}
             >
               {schedule.day}
