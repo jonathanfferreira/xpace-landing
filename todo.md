@@ -1,0 +1,82 @@
+# XPACE Premium - TODO List
+
+## 🎨 Design System e Estrutura Base
+- [x] Configurar paleta de cores premium (roxo, laranja, dourado, neon)
+- [x] Adicionar fontes customizadas (Poppins, Inter)
+- [x] Criar design tokens no index.css
+- [x] Configurar tema dark como padrão
+- [x] Instalar dependências de animação (framer-motion)
+- [x] Criar componentes base (Button premium)
+- [x] Migrar assets do projeto antigo (logos, imagens)
+
+## 🚀 Hero Section Premium
+- [x] Navbar sticky com glassmorphism
+- [x] Logo XPACE com animação de entrada
+- [x] Menu responsivo com animações
+- [x] Hero com grid 2 colunas
+- [x] Background com gradientes animados
+- [x] Título com efeito gradient
+- [x] Tagline com rotação de palavras
+- [x] CTAs premium com hover effects
+- [x] Scroll indicator animado
+- [ ] Barra de progresso de scroll
+
+## 📚 Seções de Conteúdo
+- [ ] Seção Valores (6 cards com animações)
+- [ ] Seção Estilos de Dança (grid com filtros)
+- [ ] Cards de estilos com hover 3D
+- [ ] Modal de detalhes dos estilos
+- [ ] Seção Professores (19 professores)
+- [ ] Cards de professores com fotos
+- [ ] Modal de bio dos professores
+- [ ] Integração com Instagram dos professores
+
+## 💰 Seções de Conversão
+- [ ] Grade de Horários interativa
+- [ ] Filtros por dia/estilo/professor
+- [ ] Seção Planos e Valores
+- [ ] Cards de planos com comparação
+- [ ] Toggle mensal/semestral/anual
+- [ ] Integração com Nextfit (agendamento)
+- [ ] Integração com Nextfit (contratos)
+- [ ] Formulário de contato premium
+- [ ] Validação em tempo real
+- [ ] Integração com Formspree
+- [ ] Success animation com confetti
+
+## 🎭 Galeria e Premiações
+- [ ] Galeria masonry responsiva
+- [ ] Lightbox premium
+- [ ] Filtros de galeria
+- [ ] Timeline de premiações animada
+- [ ] Cards de prêmios com troféu
+- [ ] Seção XPACE Crew (competições)
+- [ ] Seção Depoimentos (carrossel)
+
+## 🔗 Integrações e Footer
+- [ ] Botão flutuante WhatsApp
+- [ ] Links para redes sociais
+- [ ] Mapa Google Maps
+- [ ] Footer com informações completas
+- [ ] Newsletter signup
+- [ ] Google Analytics 4
+- [ ] Meta Pixel
+
+## ⚡ Performance e Otimização
+- [ ] Otimização de imagens (WebP)
+- [ ] Lazy loading de componentes
+- [ ] Code splitting
+- [ ] SEO meta tags
+- [ ] Open Graph tags
+- [ ] Schema.org markup
+- [ ] Sitemap
+- [ ] Responsividade mobile
+- [ ] Testes de performance (Lighthouse 95+)
+
+## 🚢 Deploy e Finalização
+- [ ] Build de produção
+- [ ] Configurar GitHub repository
+- [ ] Configurar Vercel deploy
+- [ ] Setup de domínio customizado
+- [ ] SSL e segurança
+- [ ] Monitoring e analytics

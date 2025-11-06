@@ -1,28 +1,19 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { APP_LOGO, APP_TITLE } from "@/const";
-import { Streamdown } from 'streamdown';
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
-  // Use APP_LOGO (as image src) and APP_TITLE if needed
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      
+      {/* Placeholder for other sections */}
+      <section id="valores" className="min-h-screen flex items-center justify-center">
+        <div className="container text-center">
+          <h2 className="text-4xl font-bold mb-4">Mais seções em breve...</h2>
+          <p className="text-muted-foreground">Valores, Estilos, Professores, Horários, Planos e muito mais!</p>
+        </div>
+      </section>
     </div>
   );
 }
