@@ -9,25 +9,25 @@ interface Teacher {
 }
 
 const TEACHERS: Teacher[] = [
-  { name: 'Alana Veiga', styles: ['Hip Hop'], ig: 'veigalanaa', image: '/images/teachers/alana.jpg' },
+  { name: 'Alana Veiga', styles: ['Hip Hop'], ig: 'veigalanaa', image: '/images/teachers/alana.jpg' }, // Sem foto
   { name: 'Alisson Felipe', styles: ['Hip Hop'], ig: 'alissonfelipes', image: '/images/teachers/alissonfelipe.jpg' },
-  { name: 'Alisson Morpheu', styles: ['Locking'], ig: 'alisson_morpheu', image: '/images/teachers/alissonmorpheu.jpg' },
+  { name: 'Alisson Morpheu', styles: ['Locking'], ig: 'alisson_morpheu', image: '/images/teachers/alissonmorpheu.jpg' }, // Sem foto
   { name: 'Bianca Marcela', styles: ['Contemporâneo', 'Jazz'], ig: 'biancamarceela', image: '/images/teachers/bianca.jpg' },
   { name: 'Dil', styles: ['Vogue', 'Jazz Funk', 'Waacking', 'Hip Hop', 'House'], ig: 'dilschulz', image: '/images/teachers/dil.jpg' },
-  { name: 'Duda Biz', styles: ['Hip Hop'], ig: 'dudabizs', image: '/images/teachers/dudabiz.jpg' },
+  { name: 'Duda Biz', styles: ['Hip Hop'], ig: 'dudabizs', image: '/images/teachers/dudabiz.jpg' }, // Sem foto
   { name: 'Eduarda Rodrigues', styles: ['Jazz Funk', 'Heels'], ig: 'eduarda.r.l', image: '/images/teachers/eduarda.jpg' },
   { name: 'Engels', styles: ['Vogue', 'Waacking', 'Jazz Funk'], ig: 'engelsmatheus_', image: '/images/teachers/engels.jpg' },
-  { name: 'Gus', styles: ['Waacking', 'Jazz Funk', 'House'], ig: 'gusjoesting', image: '/images/teachers/gus.jpg' },
-  { name: 'Guilherme Riku', styles: ['Acrobacias'], ig: 'guilhermeriku', image: '/images/teachers/guilhermeriku.jpg' },
+  { name: 'Gus', styles: ['Waacking', 'Jazz Funk', 'House'], ig: 'gusjoesting', image: '/images/teachers/gus.jpg' }, // Sem foto
+  { name: 'Guilherme Riku', styles: ['Acrobacias'], ig: 'guilhermeriku', image: '/images/teachers/guilhermeriku.jpg' }, // Sem foto
   { name: 'Isis', styles: ['Hip Hop'], ig: 'isislkr', image: '/images/teachers/isis.jpg' },
   { name: 'Jhonney', styles: ['Hip Hop', 'Dancehall', 'Jazz Funk', 'Waacking'], ig: 'jhonney.xp', image: '/images/teachers/jhonney.jpg' },
   { name: 'Lóren Stefany', styles: ['Hip Hop', 'House'], ig: 'ftloren', image: '/images/teachers/loren.jpg' },
   { name: 'Lucas Maciel', styles: ['Dancehall'], ig: 'lucasmacieldx', image: '/images/teachers/lucasmaciel.jpg' },
   { name: 'Marcelinho', styles: ['Hip Hop'], ig: 'marcelinho_hiphop', image: '/images/teachers/marcelinho.jpg' },
-  { name: 'Natália Lessin', styles: ['Ritmos'], ig: 'nataliatflessin', image: '/images/teachers/natalialessin.jpg' },
-  { name: 'Ruan Amorim', styles: ['Hip Hop', 'House'], ig: 'ruan_amrm', image: '/images/teachers/ruanamorim.jpg' },
-  { name: 'Ruan Santos', styles: ['Hip Hop'], ig: 'ruansanttoz', image: '/images/teachers/ruansantos.jpg' },
-  { name: 'Samuel Maros', styles: ['Danças Urbanas'], ig: 'samuzek', image: '/images/teachers/samuelmaros.jpg' }
+  { name: 'Natália Lessin', styles: ['Ritmos'], ig: 'nataliatflessin', image: '/images/teachers/natalialessin.jpg' }, // Sem foto
+  { name: 'Ruan Amorim', styles: ['Hip Hop', 'House'], ig: 'ruan_amrm', image: '/images/teachers/ruanamorim.jpg' }, // Sem foto
+  { name: 'Ruan Santos', styles: ['Hip Hop'], ig: 'ruansanttoz', image: '/images/teachers/ruansantos.jpg' }, // Sem foto
+  { name: 'Samuel Maros', styles: ['Danças Urbanas'], ig: 'samuzek', image: '/images/teachers/samuelmaros.jpg' } // Sem foto
 ];
 
 export default function Teachers() {
