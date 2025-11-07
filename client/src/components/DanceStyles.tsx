@@ -158,7 +158,7 @@ export default function DanceStyles() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative bg-card border border-border rounded-3xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+              className="relative bg-card border border-border rounded-3xl p-6 md:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             >
               {/* Close Button */}
               <button
@@ -172,7 +172,7 @@ export default function DanceStyles() {
               <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-br ${selectedStyle.color} opacity-20 rounded-t-3xl`} />
               
               <div className="relative pt-8">
-                <h3 className="text-4xl font-black mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <h3 className="text-3xl md:text-4xl font-black mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {selectedStyle.name}
                 </h3>
                 <p className="text-lg text-foreground/90 mb-6">

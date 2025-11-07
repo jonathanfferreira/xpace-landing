@@ -21,7 +21,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12 md:pb-0">
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -63,7 +63,7 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center lg:gap-24">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -175,7 +175,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            className="relative order-first lg:order-last"
           >
             <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-2xl shadow-primary/20 aspect-square">
               {/* Animated Gradient Background */}

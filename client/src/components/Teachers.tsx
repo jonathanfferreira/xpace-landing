@@ -98,6 +98,7 @@ export default function Teachers() {
                     src={teacher.image}
                     alt={teacher.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                     onError={(e) => {
                       e.currentTarget.onerror = null; // Evita loop infinito
                       e.currentTarget.src = '/04.png'; // Imagem de fallback
