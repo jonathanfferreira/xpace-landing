@@ -46,7 +46,7 @@ export default function Navbar() {
           <a href="/" className="flex items-center gap-3 group cursor-pointer">
               <motion.img
                 src="/01b.png"
-                alt="XPACE Dance Company"
+                alt="XPACE Escola de Dança"
                 className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
                 whileHover={{ rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.5 }}

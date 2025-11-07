@@ -52,7 +52,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <img src="/01b.png" alt="XPACE" className="h-12 w-auto" />
+              <img src="/01b.png" alt="XPACE Escola de Dança" className="h-12 w-auto" />
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 XPACE
               </span>
@@ -173,7 +173,7 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>
-              © {currentYear} {XPACE_INFO.name}. Todos os direitos reservados.
+              © {currentYear} {XPACE_INFO.name}. Todos os direitos reservados. | Desenvolvido por Manus AI
             </p>
             <p>
               CNPJ: {XPACE_INFO.contact.cnpj}
