@@ -7,10 +7,14 @@ import Teachers from '@/components/Teachers';
 import Contact from '@/components/Contact';
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
+      <WhatsAppButton />
       <Navbar />
       <Hero />
       <Values />

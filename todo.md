@@ -19,7 +19,7 @@
 - [x] Tagline com rotação de palavras
 - [x] CTAs premium com hover effects
 - [x] Scroll indicator animado
-- [ ] Barra de progresso de scroll
+- [x] Barra de progresso de scroll
 
 ## 📚 Seções de Conteúdo
 - [x] Seção Valores (6 cards com animações)
@@ -54,7 +54,7 @@
 - [ ] Seção Depoimentos (carrossel)
 
 ## 🔗 Integrações e Footer
-- [ ] Botão flutuante WhatsApp
+- [x] Botão flutuante WhatsApp
 - [ ] Links para redes sociais
 - [ ] Mapa Google Maps
 - [ ] Footer com informações completas
@@ -119,17 +119,17 @@
 - [x] Cards animados com hover effects
 
 ## 🚨 BUGS CRÍTICOS - Identidade Visual
-- [ ] Cores da marca não aparecem (roxo e laranja sumidos)
-- [ ] Página toda preta e branca sem personalidade
-- [ ] Toggle de tema não funciona ao clicar no sol
-- [ ] Revisar todo o CSS e aplicar cores corretas
-- [ ] Adicionar mais elementos visuais com roxo/laranja
-- [ ] Garantir que gradientes funcionem corretamente
+- [x] Cores da marca não aparecem (roxo e laranja sumidos)
+- [x] Página toda preta e branca sem personalidade
+- [x] Toggle de tema não funciona ao clicar no sol
+- [x] Revisar todo o CSS e aplicar cores corretas
+- [x] Adicionar mais elementos visuais com roxo/laranja
+- [x] Garantir que gradientes funcionem corretamente
 
 ## 🚀 Melhorias Finais (Últimos Créditos)
 - [ ] Melhorar responsividade mobile em todos os componentes
-- [ ] Adicionar menu hamburger funcional no mobile
-- [ ] Implementar smooth scroll nos links de navegação
+- [x] Adicionar menu hamburger funcional no mobile
+- [x] Implementar smooth scroll nos links de navegação
 - [ ] Adicionar seção de contato com formulário
 - [ ] Melhorar efeitos glassmorphism nos cards
 - [ ] Otimizar performance (lazy loading)

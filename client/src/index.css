@@ -203,26 +203,47 @@
 
 @layer utilities {
   /* XPACE Brand Color Utilities */
-  .text-xpace-purple { color: #9b87f5 !important; }
-  .text-xpace-orange { color: #ff8c53 !important; }
-  .bg-xpace-purple { background-color: #9b87f5 !important; }
-  .bg-xpace-orange { background-color: #ff8c53 !important; }
-  .border-xpace-purple { border-color: #9b87f5 !important; }
-  .border-xpace-orange { border-color: #ff8c53 !important; }
+  .text-xpace-purple { color: hsl(var(--primary)); }
+  .text-xpace-orange { color: hsl(var(--accent)); }
+  .bg-xpace-purple { background-color: hsl(var(--primary)); }
+  .bg-xpace-orange { background-color: hsl(var(--accent)); }
+  .border-xpace-purple { border-color: hsl(var(--primary)); }
+  .border-xpace-orange { border-color: hsl(var(--accent)); }
   
-  .bg-xpace-purple\/10 { background-color: rgba(155, 135, 245, 0.1) !important; }
-  .bg-xpace-orange\/10 { background-color: rgba(255, 140, 83, 0.1) !important; }
-  .border-xpace-purple\/30 { border-color: rgba(155, 135, 245, 0.3) !important; }
+  .bg-xpace-purple\/10 { background-color: hsl(var(--primary) / 0.1); }
+  .bg-xpace-purple\/20 { background-color: hsl(var(--primary) / 0.2); }
+  .bg-xpace-purple\/30 { background-color: hsl(var(--primary) / 0.3); }
+  .bg-xpace-orange\/10 { background-color: hsl(var(--accent) / 0.1); }
+  .bg-xpace-orange\/20 { background-color: hsl(var(--accent) / 0.2); }
+  .border-xpace-purple\/30 { border-color: hsl(var(--primary) / 0.3); }
+  .border-xpace-purple\/50 { border-color: hsl(var(--primary) / 0.5); }
   
   .gradient-xpace {
-    background: linear-gradient(135deg, #9b87f5 0%, #ff8c53 100%) !important;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+  
+  .gradient-xpace-reverse {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%);
   }
   
   .gradient-xpace-text {
-    background: linear-gradient(135deg, #9b87f5 0%, #c89fff 50%, #ff8c53 100%);
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
+  }
+  
+  /* Scroll Progress Bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    transform-origin: 0%;
+    z-index: 9999;
   }
 }
 
