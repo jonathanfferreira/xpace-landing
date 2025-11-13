@@ -91,8 +91,8 @@ export default function Teachers() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group"
             >
-              <div className="relative bg-card border border-border rounded-2xl p-6 h-full flex flex-col items-center text-center transition-all duration-300 hover:border-xpace-purple/50 hover:shadow-xl hover:shadow-xpace-purple/10">
-                {/* // Avatar
+              <div className="relative bg-card border border-border rounded-2xl p-6 h-full flex flex-col items-center text-center transition-all duration-300 hover:border-xpace-purple/50 hover:shadow-xl hover:shadow-xpace-purple/10 teacher-card">
+                {/* Avatar */}
                 <div className="w-20 h-20 rounded-full mb-4 overflow-hidden border-2 border-xpace-purple/50 shadow-lg shadow-xpace-purple/20">
                   <img
                     src={teacher.image}
@@ -105,7 +105,7 @@ export default function Teachers() {
                     }}
                   />
                 </div>
-
+                
                 {/* Name */}
                 <h3 className="font-bold text-lg mb-2 text-foreground">
                   {teacher.name}
