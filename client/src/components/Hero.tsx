@@ -103,7 +103,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground/90"
             >
-              A escola de dança que multiplica talentos em{' '}
+              A escola de dança que une o digital ao físico, transformando cada movimento em arte e conectando pessoas através de experiências interativas e inovadoras.{' '}
               <motion.span
                 key={currentStyle}
                 initial={{ opacity: 0, y: 20 }}

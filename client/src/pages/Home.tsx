@@ -1,6 +1,7 @@
 
 import { lazy, Suspense } from 'react';
 import Navbar from "@/components/Navbar";
+import About from "@/components/About";
 import Hero from "@/components/Hero";
 
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
       <WhatsAppButton />
       <Navbar />
       <Hero />
+      <About />
       <Suspense fallback={null}>
         <Values />
         <DanceStyles />

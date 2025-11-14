@@ -54,7 +54,7 @@ export default function Values() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Os pilares que guiam nossa comunidade e fazem da XPACE um lugar especial para dançar e crescer.
+            Os pilares que guiam nossa comunidade e transformam a XPACE em um espaço onde a diversão se aplica junto com o compromisso e a dedicação.
           </p>
         </motion.div>
 
