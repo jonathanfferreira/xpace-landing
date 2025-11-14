@@ -155,6 +155,7 @@
   h1 {
     font-family: 'Chillax', system-ui, -apple-system, sans-serif;
     font-weight: 700;
+    text-transform: uppercase; /* Aplicar maiúsculas no H1 */
   }
   .font-chillax {
     font-family: 'Chillax', system-ui, -apple-system, sans-serif;
@@ -162,6 +163,7 @@
   h2, h3, h4, h5, h6 {
     font-family: 'Steelfish', sans-serif;
     font-weight: 700;
+    text-transform: uppercase; /* Aplicar maiúsculas nos subtítulos */
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

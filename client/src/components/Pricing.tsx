@@ -55,7 +55,7 @@ export default function Pricing() {
           <div className="inline-flex items-center justify-center gap-4 p-2 bg-card border border-border rounded-full">
             <button
               onClick={() => setFrequency('once')}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 uppercase ${
                 frequency === 'once'
                   ? 'gradient-xpace text-white'
                   : 'text-muted-foreground hover:text-foreground'
@@ -65,7 +65,7 @@ export default function Pricing() {
             </button>
             <button
               onClick={() => setFrequency('twice')}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 uppercase ${
                 frequency === 'twice'
                   ? 'gradient-xpace text-white'
                   : 'text-muted-foreground hover:text-foreground'
