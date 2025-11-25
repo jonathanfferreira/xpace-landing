@@ -39,7 +39,7 @@ export const DANCE_STYLES = [
     color: 'from-primary to-secondary',
     audience: 'Para todos os níveis, de iniciantes a avançados. Ideal para quem busca ritmo, expressão e cultura.',
     learning: 'Técnicas de solo, isolações, grooves, freestyle e história da cultura Hip Hop.',
-    videoUrl: 'https://www.youtube.com/watch?v=example'
+    videoUrl: 'https://www.youtube.com/watch?v=cyFQmBLISr4'
   },
   {
     slug: 'jazz',
