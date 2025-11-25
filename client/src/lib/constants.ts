@@ -38,7 +38,8 @@ export const DANCE_STYLES = [
     description: 'Hip Hop, Breaking, Popping, Locking e toda a cultura urbana. Grooves, freestyle e foundations para todos os níveis.',
     color: 'from-primary to-secondary',
     audience: 'Para todos os níveis, de iniciantes a avançados. Ideal para quem busca ritmo, expressão e cultura.',
-    learning: 'Técnicas de solo, isolações, grooves, freestyle e história da cultura Hip Hop.'
+    learning: 'Técnicas de solo, isolações, grooves, freestyle e história da cultura Hip Hop.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   },
   {
     slug: 'jazz',
@@ -46,7 +47,8 @@ export const DANCE_STYLES = [
     description: 'Estilo clássico com técnica refinada, isolações e expressão artística. Base para diversos estilos de dança.',
     color: 'from-secondary to-accent',
     audience: 'Recomendado para quem busca aprimoramento técnico, postura e elegância. Todos os níveis.',
-    learning: 'Técnicas de piruetas, saltos, alongamento, postura e coreografias expressivas.'
+    learning: 'Técnicas de piruetas, saltos, alongamento, postura e coreografias expressivas.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   },
   {
     slug: 'jazzfunk',
@@ -54,7 +56,8 @@ export const DANCE_STYLES = [
     description: 'Mistura do jazz com a estética pop/comercial. Ênfase em precisão, performance e atitude.',
     color: 'from-accent to-primary',
     audience: 'Para quem gosta de danças energéticas e coreografias de videoclipes. Nível intermediário/avançado.',
-    learning: 'Combinações coreográficas, performance, precisão de movimentos e presença de palco.'
+    learning: 'Combinações coreográficas, performance, precisão de movimentos e presença de palco.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   },
   {
     slug: 'heels',
@@ -62,7 +65,8 @@ export const DANCE_STYLES = [
     description: 'Dança de salto alto combinando técnica, sensualidade e empoderamento. Confiança e expressão feminina.',
     color: 'from-neon-pink to-secondary',
     audience: 'Para quem busca confiança, sensualidade e técnica em cima do salto. Nível iniciante/intermediário.',
-    learning: 'Técnicas de equilíbrio, postura, movimentos sensuais e coreografias em salto alto.'
+    learning: 'Técnicas de equilíbrio, postura, movimentos sensuais e coreografias em salto alto.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   },
   {
     slug: 'contemporaneo',
@@ -70,7 +74,8 @@ export const DANCE_STYLES = [
     description: 'Dança expressiva que combina técnicas clássicas e modernas com liberdade criativa e emoção.',
     color: 'from-primary to-electric-blue',
     audience: 'Ideal para quem busca liberdade de movimento e expressão de sentimentos. Todos os níveis.',
-    learning: 'Improvisação, contato e peso, fluidez e técnicas de respiração e movimento.'
+    learning: 'Improvisação, contato e peso, fluidez e técnicas de respiração e movimento.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   },
   {
     slug: 'danca-de-salao',
@@ -78,7 +83,8 @@ export const DANCE_STYLES = [
     description: 'Ritmos latinos e de salão. Samba, salsa, forró, bolero e muito mais para dançar a dois.',
     color: 'from-accent to-neon-pink',
     audience: 'Para quem quer aprender a dançar a dois e se divertir em festas e bailes. Todos os níveis.',
-    learning: 'Passos básicos, condução, musicalidade e etiqueta de salão dos principais ritmos.'
+    learning: 'Passos básicos, condução, musicalidade e etiqueta de salão dos principais ritmos.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   },
   {
     slug: 'acrobacia',
@@ -86,7 +92,8 @@ export const DANCE_STYLES = [
     description: 'Movimentos acrobáticos e aéreos. Força, flexibilidade e controle corporal para complementar coreografias.',
     color: 'from-primary to-accent',
     audience: 'Para quem busca força, flexibilidade e elementos acrobáticos para aprimorar a dança. Todos os níveis.',
-    learning: 'Técnicas de solo, aéreos, flexibilidade e segurança na execução de movimentos acrobáticos.'
+    learning: 'Técnicas de solo, aéreos, flexibilidade e segurança na execução de movimentos acrobáticos.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   },
   {
     slug: 'fitdance',
@@ -94,7 +101,8 @@ export const DANCE_STYLES = [
     description: 'Dança fitness com coreografias animadas. Queime calorias enquanto se diverte dançando!',
     color: 'from-electric-blue to-primary',
     audience: 'Para quem busca uma atividade física divertida e com alto gasto calórico. Todos os níveis.',
-    learning: 'Coreografias de diversos ritmos, coordenação motora e condicionamento físico.'
+    learning: 'Coreografias de diversos ritmos, coordenação motora e condicionamento físico.',
+    videoUrl: 'https://www.youtube.com/watch?v=example'
   }
 ];
 

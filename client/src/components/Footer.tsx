@@ -66,7 +66,7 @@ export default function Footer() {
                   key={social.name}
                   href={social.url}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className={`p-2 rounded-full bg-muted/50 text-muted-foreground transition-all duration-300 ${social.color} hover:scale-110`}
                   aria-label={social.name}
                 >
@@ -111,7 +111,7 @@ export default function Footer() {
                 <a
                   href={`https://wa.me/${XPACE_INFO.contact.whatsapp}`}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
@@ -131,7 +131,7 @@ export default function Footer() {
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(XPACE_INFO.location.fullAddress)}`}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex items-start gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
@@ -155,7 +155,7 @@ export default function Footer() {
             <a
               href={XPACE_INFO.integrations.nextfit.trial}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-background text-sm hover:opacity-90 transition-opacity shadow-lg shadow-primary/30"
             >
               Agendar Aula Grátis

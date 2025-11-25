@@ -120,7 +120,7 @@ export default function Teachers() {
                     >
                       {style}
                     </span>
-                  )) হাফেজে Quran is a memorizer of the Quran}
+                  ))}
                   {teacher.styles.length > 2 && (
                     <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
                       +{teacher.styles.length - 2}

@@ -46,7 +46,7 @@ export default function Navbar() {
           <a href="/" className="flex items-center gap-3 group cursor-pointer">
               <motion.img
                 src="/01b.png"
-                alt="XPACE Escola de Dança"
+                alt="Logo da XPACE Escola de Dança"
                 className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
                 whileHover={{ rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.5 }}
@@ -90,7 +90,7 @@ export default function Navbar() {
               asChild
               className="border-primary/50 hover:bg-primary/10"
             >
-              <a href={XPACE_INFO.integrations.nextfit.trial} target="_blank" rel="noreferrer">
+              <a href={XPACE_INFO.integrations.nextfit.trial} target="_blank" rel="noopener noreferrer">
                 Aula Experimental
               </a>
             </Button>
@@ -100,7 +100,7 @@ export default function Navbar() {
               asChild
               className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
             >
-              <a href={whatsappLink} target="_blank" rel="noreferrer">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 Matrículas
               </a>
             </Button>
@@ -168,7 +168,7 @@ export default function Navbar() {
                   asChild
                   className="border-primary/50 hover:bg-primary/10 w-full"
                 >
-                  <a href={XPACE_INFO.integrations.nextfit.trial} target="_blank" rel="noreferrer">
+                  <a href={XPACE_INFO.integrations.nextfit.trial} target="_blank" rel="noopener noreferrer">
                     Aula Experimental
                   </a>
                 </Button>
@@ -177,7 +177,7 @@ export default function Navbar() {
                   asChild
                   className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity w-full"
                 >
-                  <a href={whatsappLink} target="_blank" rel="noreferrer">
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     Matrículas
                   </a>
                 </Button>

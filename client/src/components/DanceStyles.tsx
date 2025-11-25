@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, Youtube } from 'lucide-react';
 import { DANCE_STYLES } from '@/lib/constants';
 
 export default function DanceStyles() {
@@ -195,7 +195,7 @@ export default function DanceStyles() {
                   </div>
                 </div>
 
-                <div className="mt-8 flex gap-4">
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <a
                     href="#horarios"
                     onClick={() => setSelectedStyle(null)}
@@ -203,10 +203,21 @@ export default function DanceStyles() {
                   >
                     Ver horários
                   </a>
+                  {selectedStyle.videoUrl && (
+                    <a
+                      href={selectedStyle.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-6 py-3 border border-red-500 text-red-500 rounded-full font-bold text-center hover:bg-red-500/10 transition-colors"
+                    >
+                      <Youtube size={20} />
+                      Assistir vídeo
+                    </a>
+                  )}
                   <a
-                    href="https://agendamento.nextfit.com.br/f9b1ea53-0e0e-4f98-9396-3dab7c9fbff4"
+                    href={XPACE_INFO.integrations.nextfit.trial}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="flex-1 px-6 py-3 border border-primary rounded-full font-bold text-primary text-center hover:bg-primary/10 transition-colors"
                   >
                     Aula experimental

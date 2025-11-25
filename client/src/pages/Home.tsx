@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import Xpaceflix from "@/components/Xpaceflix"; // Importando o novo componente
 
 import Footer from "@/components/Footer";
 
@@ -16,14 +17,17 @@ const Timeline = lazy(() => import("@/components/Timeline"));
 const Contact = lazy(() => import("@/components/Contact"));
 import ScrollProgress from "@/components/ScrollProgress";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import JsonLd from "@/components/JsonLd";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <JsonLd />
       <ScrollProgress />
       <WhatsAppButton />
       <Navbar />
       <Hero />
+      <Xpaceflix /> {/* Adicionando o componente aqui */}
       <About />
       <Suspense fallback={null}>
         <Values />
