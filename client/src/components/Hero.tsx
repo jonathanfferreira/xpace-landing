@@ -78,7 +78,7 @@ export default function Hero() {
                   transition={{ duration: 0.8, ease: 'easeOut' }}
                   className="text-center md:text-left"
                 >
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
                     <span className="block">A escola de dança</span>
                     <WordRotate
                       className="gradient-xpace-text"
@@ -95,7 +95,7 @@ export default function Hero() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <Button asChild size="lg" className="group">
-                      <a 
+                      <a
                         href="https://wa.me/5547999463474?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20na%20XPACE."
                         target="_blank"
                         rel="noreferrer"
@@ -118,8 +118,8 @@ export default function Hero() {
                   className="relative flex items-center justify-center"
                 >
                   <a href="https://www.instagram.com/p/C9Yg0iVuWwZ/" target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src="/images/poster.png" 
+                    <img
+                      src="/images/poster.png"
                       alt="Cartaz do espetáculo Xpaceflix - 7 de Dezembro no Teatro Juarez Machado"
                       className="w-full max-w-xl h-auto rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
                     />
@@ -138,7 +138,7 @@ export default function Hero() {
                   transition={{ duration: 0.8, ease: 'easeOut' }}
                   className="text-center md:text-left"
                 >
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
                     <span className="block">Pódio na</span>
                     <span className="gradient-xpace-text">América Latina!</span>
                   </h1>
@@ -163,11 +163,11 @@ export default function Hero() {
                   className="relative w-full max-w-xl mx-auto"
                 >
                   <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-2xl">
-                    <iframe 
-                      src="https://www.youtube.com/embed/TipBGmO_PzY" 
-                      title="YouTube video player" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    <iframe
+                      src="https://www.youtube.com/embed/TipBGmO_PzY"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="w-full h-full"
                     ></iframe>
@@ -186,7 +186,7 @@ export default function Hero() {
                   transition={{ duration: 0.8, ease: 'easeOut' }}
                   className="text-center md:text-left"
                 >
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
                     <span className="block">Nossa incrível</span>
                     <span className="gradient-xpace-text">Mini Crew</span>
                   </h1>
@@ -211,11 +211,11 @@ export default function Hero() {
                   className="relative w-full max-w-xl mx-auto"
                 >
                   <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-2xl">
-                    <iframe 
-                      src="https://www.youtube.com/embed/cyFQmBLISr4" 
-                      title="YouTube video player" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    <iframe
+                      src="https://www.youtube.com/embed/cyFQmBLISr4"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="w-full h-full"
                     ></iframe>
@@ -234,7 +234,7 @@ export default function Hero() {
                   transition={{ duration: 0.8, ease: 'easeOut' }}
                   className="text-center md:text-left"
                 >
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6">
                     <span className="block">Nosso Elenco</span>
                     <span className="gradient-xpace-text">Júnior Brilha!</span>
                   </h1>
@@ -259,11 +259,11 @@ export default function Hero() {
                   className="relative w-full max-w-xl mx-auto"
                 >
                   <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-2xl">
-                    <iframe 
-                      src="https://www.youtube.com/embed/wGzmnBXzcUs" 
-                      title="YouTube video player" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    <iframe
+                      src="https://www.youtube.com/embed/wGzmnBXzcUs"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="w-full h-full"
                     ></iframe>

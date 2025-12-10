@@ -31,7 +31,7 @@ export default function Pricing() {
     <section id="planos" className="py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/5 to-background pointer-events-none" />
-      
+
       <div className="container relative z-10">
         {/* Section Header */}
         <motion.div
@@ -41,7 +41,7 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4">
             Planos e{' '}
             <span className="gradient-xpace-text">
               Valores
@@ -55,21 +55,19 @@ export default function Pricing() {
           <div className="inline-flex items-center justify-center gap-4 p-2 bg-card border border-border rounded-full">
             <button
               onClick={() => setFrequency('once')}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 uppercase ${
-                frequency === 'once'
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 uppercase ${frequency === 'once'
                   ? 'gradient-xpace text-white'
                   : 'text-muted-foreground hover:text-foreground'
-              }`}
+                }`}
             >
               1x por semana
             </button>
             <button
               onClick={() => setFrequency('twice')}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 uppercase ${
-                frequency === 'twice'
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 uppercase ${frequency === 'twice'
                   ? 'gradient-xpace text-white'
                   : 'text-muted-foreground hover:text-foreground'
-              }`}
+                }`}
             >
               2x por semana
             </button>
@@ -102,11 +100,10 @@ export default function Pricing() {
               )}
 
               <div
-                className={`relative bg-card border rounded-3xl p-8 h-full flex flex-col transition-all duration-300 ${
-                  plan.popular
+                className={`relative bg-card border rounded-3xl p-6 sm:p-8 h-full flex flex-col transition-all duration-300 ${plan.popular
                     ? 'border-primary shadow-xl shadow-primary/20'
                     : 'border-border hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10'
-                }`}
+                  }`}
               >
                 {/* Gradient Background */}
                 {plan.popular && (
@@ -170,11 +167,10 @@ export default function Pricing() {
                   {/* CTA Button */}
                   <Button
                     asChild
-                    className={`w-full ${
-                      plan.popular
+                    className={`w-full ${plan.popular
                         ? 'bg-gradient-to-r from-primary to-secondary hover:opacity-90'
                         : 'bg-card border-2 border-primary text-primary hover:bg-primary/10'
-                    }`}
+                      }`}
                     size="lg"
                   >
                     <a

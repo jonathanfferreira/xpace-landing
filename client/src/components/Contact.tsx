@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { XPACE_INFO } from '@/lib/constants';
 
@@ -12,27 +12,93 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  // Validação em tempo real
+  const validateField = (name: string, value: string): string => {
+    switch (name) {
+      case 'name':
+        return value.length < 2 ? 'Nome deve ter pelo menos 2 caracteres' : '';
+      case 'email':
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return !emailRegex.test(value) ? 'E-mail inválido' : '';
+      case 'phone':
+        if (!value) return ''; // Telefone é opcional
+        const phoneRegex = /^\(?[0-9]{2}\)?[\s.-]?[0-9]{4,5}[\s.-]?[0-9]{4}$/;
+        return !phoneRegex.test(value.replace(/\s/g, '')) ? 'Telefone inválido' : '';
+      case 'message':
+        return value.length < 10 ? 'Mensagem deve ter pelo menos 10 caracteres' : '';
+      default:
+        return '';
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validar todos os campos
+    const newErrors: { [key: string]: string } = {};
+    Object.entries(formData).forEach(([key, value]) => {
+      const error = validateField(key, value);
+      if (error && (key !== 'phone' || value)) newErrors[key] = error;
+    });
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    
-    setTimeout(() => setSubmitted(false), 5000);
+    setErrors({});
+
+    try {
+      // Integração real com Formspree
+      const response = await fetch(XPACE_INFO.integrations.formspree, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Não informado',
+          message: formData.message,
+          _subject: `[XPACE Website] Novo contato de ${formData.name}`
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setSubmitStatus('idle'), 8000);
+      } else {
+        throw new Error('Falha no envio');
+      }
+    } catch {
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Limpar erro ao digitar
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    const error = validateField(name, value);
+    if (error && (name !== 'phone' || value)) {
+      setErrors(prev => ({ ...prev, [name]: error }));
+    }
   };
 
   const contactInfo = [
@@ -148,7 +214,7 @@ export default function Contact() {
                   rel="noreferrer"
                 >
                   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-2">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                   </svg>
                   Chamar no WhatsApp
                 </a>
@@ -175,9 +241,11 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all"
+                  onBlur={handleBlur}
+                  className={`w-full px-4 py-3 bg-background border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all ${errors.name ? 'border-red-500' : 'border-border'}`}
                   placeholder="Seu nome"
                 />
+                {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
               </div>
 
               <div>
@@ -191,9 +259,11 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all"
+                  onBlur={handleBlur}
+                  className={`w-full px-4 py-3 bg-background border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all ${errors.email ? 'border-red-500' : 'border-border'}`}
                   placeholder="seu@email.com"
                 />
+                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
               </div>
 
               <div>
@@ -206,9 +276,11 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all"
+                  onBlur={handleBlur}
+                  className={`w-full px-4 py-3 bg-background border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all ${errors.phone ? 'border-red-500' : 'border-border'}`}
                   placeholder="(47) 99999-9999"
                 />
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
               </div>
 
               <div>
@@ -221,15 +293,17 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
+                  onBlur={handleBlur}
                   rows={5}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all resize-none"
+                  className={`w-full px-4 py-3 bg-background border rounded-xl focus:outline-none focus:ring-2 focus:ring-xpace-purple/50 transition-all resize-none ${errors.message ? 'border-red-500' : 'border-border'}`}
                   placeholder="Conte-nos como podemos te ajudar..."
                 />
+                {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
               </div>
 
               <Button
                 type="submit"
-                disabled={isSubmitting || submitted}
+                disabled={isSubmitting || submitStatus === 'success'}
                 className="w-full gradient-xpace text-white hover:opacity-90 transition-opacity disabled:opacity-50"
               >
                 {isSubmitting ? (
@@ -237,9 +311,10 @@ export default function Contact() {
                     <Loader2 className="w-5 h-5 mr-2 animate-spin" />
                     Enviando...
                   </>
-                ) : submitted ? (
+                ) : submitStatus === 'success' ? (
                   <>
-                    ✓ Mensagem enviada!
+                    <CheckCircle className="w-5 h-5 mr-2" />
+                    Mensagem enviada!
                   </>
                 ) : (
                   <>
@@ -249,14 +324,30 @@ export default function Contact() {
                 )}
               </Button>
 
-              {submitted && (
-                <motion.p
+              {submitStatus === 'success' && (
+                <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-sm text-center text-green-500"
+                  className="flex items-center gap-2 p-4 bg-green-500/10 border border-green-500/30 rounded-xl"
                 >
-                  Obrigado! Entraremos em contato em breve.
-                </motion.p>
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  <p className="text-sm text-green-500">
+                    Obrigado! Recebemos sua mensagem e entraremos em contato em breve.
+                  </p>
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/30 rounded-xl"
+                >
+                  <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                  <p className="text-sm text-red-500">
+                    Erro ao enviar mensagem. Tente novamente ou entre em contato pelo WhatsApp.
+                  </p>
+                </motion.div>
               )}
             </form>
           </motion.div>
