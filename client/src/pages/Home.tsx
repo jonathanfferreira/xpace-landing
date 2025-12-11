@@ -11,6 +11,7 @@ const DanceStyles = lazy(() => import("@/components/DanceStyles"));
 const Schedule = lazy(() => import("@/components/Schedule"));
 const Teachers = lazy(() => import("@/components/Teachers"));
 const Timeline = lazy(() => import("@/components/Timeline"));
+const Gallery = lazy(() => import("@/components/Gallery"));
 const Pricing = lazy(() => import("@/components/Pricing"));
 const Xpaceflix = lazy(() => import("@/components/Xpaceflix"));
 const Contact = lazy(() => import("@/components/Contact"));
@@ -36,6 +37,7 @@ export default function Home() {
         <Schedule />
         <Teachers />
         <Timeline />
+        <Gallery />
         <Pricing />
         <Xpaceflix />
         <Contact />
